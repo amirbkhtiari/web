@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>For and While</title>  
+</head>
+<body>
+    <h2 id="username"></h2>
+    <p id="status"></p>
+    <script>
+        let test = {
+            test1: {
+                test2: {
+                    test3: 'TEST3'
+                }
+            },
+            test4: 'TEST4',
+        }
+        console.log(test.test1.test2.test3);
+        let values = {
+            username: 'uname',
+            ishuman: false,
+    
+        }
+        let confirm_user = confirm('Are you human?')
+        let inputuname = prompt('Enter your name')
+    
+        values.username = inputuname
+    
+        if (confirm_user) {
+            values.ishuman = true;
+        }
+        
+        for (let i = 0; i < 5; i++) {
+            alert('For test word' + i);
+        }
+    
+        let j = 0
+        while (j < 5) {
+            console.log('While test word' + j);
+            j++;
+        }
+
+    </script>
+
+</body>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Add User</title>  
+</head>
+<body>
+    <script>
+
+let data={};
+let adduser = confirm('Add User?');
+
+while (adduser == true) {
+    let fname = prompt('Please enter your first name :')
+    let lname = prompt('Please enter your last name :')
+    let age = prompt('Please enter your age :')
+
+    let user_data = {
+        fname : fname +" "+ lname,
+        age : age,
+    }
+    console.log('New user :' , user_data)
+
+    adduser = confirm('Add another user?');
+}
+    </script>
+</body>
+</html>
