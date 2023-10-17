@@ -20,6 +20,30 @@
             height: 100vh;
             background-color: tomato;
             padding: 20vh 5rem;
+
+        }
+
+        div #popup_overlay {
+            width: 70vw;
+            height: 70vh;
+            background-color: rgba(255, 166, 0, 0.822);
+            padding: 20vh 5rem;
+            position: absolute;
+            left: 0;
+            top: 10vh;
+            right: 0;
+            bottom: 0;
+            margin: 0 auto;
+            display: none;
+            border-radius: 20px;
+        }
+
+        div #popup_overlay #close {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            font-weight: 900;
+            cursor: pointer;
         }
 
         div.container p {
@@ -39,11 +63,14 @@
             margin-left: 0;
             border: 0;
         }
+
         div.container a {
             outline: none;
             text-decoration: none;
+            cursor: pointer;
 
         }
+
         div.container img {
             width: 100px;
         }
@@ -54,6 +81,21 @@
 <body>
 
     <div class="container">
+        <div id="popup_overlay">
+            <div id="close">
+                X
+            </div>
+
+            <img src="./logo.png" alt="">
+            <h1>
+                Hello, I AM <strong>MONTAZERI</strong>
+            </h1>
+            <p style="color:orange">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ipsum impedit!
+                Distinctio, amet ut atque
+                quidem officiis ad itaque quis, repudiandae assumenda sit nostrum vitae harum saepe! Assumenda, iure
+                repellat.</p>
+
+        </div>
         <img src="./logo.png" alt="">
         <h1>
             Hello, I AM <strong>MONTAZERI</strong>
@@ -76,7 +118,7 @@
             <a href="#">
                 <button>
                     LinkedIn
-                </button>    
+                </button>
             </a>
         </div>
 
@@ -85,7 +127,21 @@
             <li>Design</li>
             <li>Web3</li>
         </ul>
+        <button id="popup">POPUP</button>
+
     </div>
 </body>
+<script>
+    document.getElementById('popup').addEventListener('click', function () {
+        document.getElementById("popup_overlay").style.display = "block";
+
+    });
+
+    document.getElementById('close').addEventListener('click', function () {
+        document.getElementById("popup_overlay").style.display = "none";
+
+    });
+
+</script>
 
 </html>
